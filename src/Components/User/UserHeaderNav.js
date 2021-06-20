@@ -9,7 +9,7 @@ import styles from './UserHeaderNav.module.css'
 import useMedia from '../../Hooks/useMedia';
 
 const UserHeaderNav = () => {
-    const {userlogout} = React.useContext(UserContext);
+    const {userLogout} = React.useContext(UserContext);
     const mobile = useMedia('(max-width:40rem');
     const [mobileMenu, setMobileMenu] = React.useState(false);
 
@@ -29,7 +29,7 @@ const UserHeaderNav = () => {
             <NavLink to="/conta" end activeClassName={styles.active}> <MinhasFotos /> {mobile && 'Minhas Fotos'} </NavLink>
             <NavLink to="/conta/estatisticas" activeClassName={styles.active}> <Estatisticas /> {mobile && 'Estatistica'}</NavLink>
             <NavLink to="/conta/postar" activeClassName={styles.active}> <Adicionar /> {mobile && 'Adicionar Fotos'}</NavLink>
-            <button onClick={userlogout}> <Sair /> {mobile && 'Sair'}</button>
+            <button onClick={userLogout}> <Sair /> {mobile && 'Sair'}</button>
         </nav>
         </>
     )

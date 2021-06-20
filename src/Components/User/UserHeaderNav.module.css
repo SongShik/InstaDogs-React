@@ -104,7 +104,7 @@
   transform: initial;
   opacity: 1;
   pointer-events: initial;
-  z-index: 100;
+  z-index: 1;
 }
 
 .navMobile a,
