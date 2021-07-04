@@ -8,7 +8,7 @@ A melhor rede social para seus PETS. Crie seu perfil e se divirta.
 - E para saber mais acesse a aba de estatísticas, para saber mais informações
 - É claro, veja fotos de outras pessoas e comente, veja também os perfis das pessoas
 - Caso aconteça, resete sua senha, o link especial para mudar sua senha vira direto para seu Email \
-**É o mais importante de tudo se divirta :) **
+**É o mais importante de tudo se divirta :)**
 
 ## Informações importantes
 
