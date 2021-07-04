@@ -1,0 +1,16 @@
+:root{
+    --cor-primary: #ff665a;
+    --cor-secundary: rgb(235, 235, 255);
+    --cor-tres: #f6f6ff;
+  }
+
+.footer{
+    background: var(--cor-primary);
+    padding: 3rem 0;
+    text-align: center;
+    color: var(--cor-secundary);
+}
+
+.footer p{
+    margin-top: 1rem;
+}

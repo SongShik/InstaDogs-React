@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 import useForm from '../../Hooks/useForm';
-import { TOKEN_POST , USER_GET } from '../../Api';
 import { UserContext } from '../../UserContext';
 import Error from '../Helper/Error';
 import styles from './LoginForm.module.css';
@@ -13,7 +12,7 @@ const LoginForm = () => {
     const username = useForm();
     const password = useForm();
 
-    const  { userLogin , error , loading } = React.useContext(UserContext);
+    const  { loading, userLogin , error } = React.useContext(UserContext);
 
     async function handleSubmit(event){
         event.preventDefault();
@@ -31,8 +30,12 @@ const LoginForm = () => {
                 
                 <Input  label="Senha" type="password" name="password" {...password}/>
                 
-                <Button>Entrar</Button>
-                <Error error={error}/>
+                {loading ? (
+                <Button disabled>Enviando...</Button>
+                    ) : (
+                    <Button>Entrar</Button>
+                )}
+                <Error error={error && "Parece que você inseriu dados incorretos"}/>
             </form>
             <Link className={styles.perdeu} to="/login/perdeu">Perdeu a Senha?</Link>
             <div className={styles.cadastro}>
